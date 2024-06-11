@@ -9,6 +9,9 @@
 
 <body>
   <div id="root"></div>
+  <script src="tagComponent.js"></script>
+  <script src="app.js"></script>
+  <script src="render.js"></script>
   <script>
     const root = document.getElementById('root');
     const names = [
@@ -33,29 +36,9 @@
       "최유진",
       "황재민"
     ];
-    const tagComponent = (tagName, textNode) => {
-      return `<${tagName}>${textNode}</${tagName}>`;
-    };
 
-    const app = () => {
-      const a = [];
-      const b = {
-        last : "입니다."
-      }
-      names.forEach((element)=>{
-        if(element==='신지윤'){
-          a.push(tagComponent("h1",`${element}${b.last}`))
-        }
-        else{
-          a.push(tagComponent("h2",`${element}${b.last}`))
-        }
-      })
-      return a.join('');
-    }
-    const render = () => {
-      root.innerHTML = app();
-    }
     render();
+    
   </script>
 </body>
 
