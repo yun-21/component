@@ -9,22 +9,22 @@
   <div id="root"></div>
   <script>
     const root = document.getElementById('root');
-    const h1Component = (textNode) =>{
-      return `<h1>${textNode}</h1>`;
+    const tagComponent = (tagName,textNode) =>{
+      return `<${tagName}>${textNode}</${tagName}>`;
     };
 
     const app = () => {
       return `
-      ${h1Component("신지윤입니다.")}
-      ${h1Component("망부석입니다.")}
-      ${h1Component("오하요입니다.")}
+      ${tagComponent("h1","신지윤입니다.")}
+      ${tagComponent("h2","망부석입니다.")}
+      ${tagComponent("h3","오하요입니다.")}
       `;
     }
     console.log(app())
     const render = () => {
       root.innerHTML=app();
     }
-    render(); //innerHTML 넣어줘임 그려줘가 아니라
+    render();
   </script>
 </body>
 </html>
