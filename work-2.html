@@ -6,6 +6,25 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div id="root"></div>
+  <script>
+    const root = document.getElementById('root');
+    const h1Component = (textNode) =>{
+      return `<h1>${textNode}</h1>`;
+    };
+
+    const app = () => {
+      return `
+      ${h1Component("신지윤입니다.")}
+      ${h1Component("망부석입니다.")}
+      ${h1Component("오하요입니다.")}
+      `;
+    }
+    console.log(app())
+    const render = () => {
+      root.innerHTML=app();
+    }
+    render(); //innerHTML 넣어줘임 그려줘가 아니라
+  </script>
 </body>
 </html>
