@@ -1,16 +1,16 @@
 const date = new Date()
-const today = date.getDate()
+const today = date.getHours()
 const tagComponent = (tagName, textNode) => {
   return `<${tagName}>${textNode}</${tagName}>`;
 }
 
-const container = (value) => {
+const container = () => {
 
   const helper= () => {
-    if(today === value){
-    return `${tagComponent('div', '오늘이네용')}`
+    if(today >= 12){
+    return `${tagComponent('div', '오후네용')}`
     }else{
-    return `${tagComponent('div', '오늘이 아니네요..')}`
+    return `${tagComponent('div', '오전이네용')}`
     }
   }
   return `
@@ -19,4 +19,4 @@ const container = (value) => {
     ${tagComponent('footer', '푸터부분')}
   `;
 }
-console.log(container(11))
+console.log(container())
