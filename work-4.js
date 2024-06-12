@@ -1,1 +1,8 @@
-console.log('work-4.js')
+const component = () => {
+  let obj = {};
+  
+  let innerFunc = () =>{
+
+  }
+  return "some string";
+}
