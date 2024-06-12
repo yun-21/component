@@ -1,8 +1,8 @@
-const component = () => {
+const component = (age, job) => {
   let obj = {
     name : "신지윤",
-    age : 25,
-    job : "망고재배사"
+    age : age,
+    job : job
   };
   
   let innerFunc = () =>{
