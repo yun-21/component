@@ -1,16 +1,22 @@
-const component = (id, name ,age) =>{
-    return {
-        id : id,
-        name : name,
-        age : age
+class Component {
+    constructor(id, name, age){
+        this.id=id;
+        this.name=name;
+        this.age=age;
+    }
+
+    render(){
+        return `
+        <h1>${this.id}</h1>
+        <h2>${this.name}</h2>
+        <h3>${this.age}</h3>
+        `
     }
 }
 
-const render = () =>{
-    const a = component (1,"컴포넌",22);
-    return `
-    <h1>${a.id}</h1>
-    <h3>${a.name}</h3>
-    <h4>${a.age}</h4>`
+const app=(id,name,age) => {
+    const component = new Component(id,name,age)
+    return component.render()
 }
-console.log(render())
+
+console.log(app(1,"됐나",22))
