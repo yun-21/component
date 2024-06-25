@@ -1,18 +1,12 @@
-class Test{
-  constructor(hobby, want, age){
-    this.hobby = hobby;
-    this.want = want;
-    this.age = age;
-  }
+class Wallet {
+    constructor(money,picture){
+        this.money = money;
+        this.picture = picture;
+    }
 
-  render(){
-    return `
-    <h1>${this.hobby}</h1>
-    <h2>${this.want}</h2>
-    <h3>${this.age}</h3>
-    `
-  }
+    money(){
+        return `<h1>나의 지갑에는 ${this.money}정도가 있습니다.</h1>`
+    }
 }
-
-const test = new Test("네일하기","응용잘하기",25)
-console.log(test.render())
+const wallet = new Wallet(1000,"부모님");
+console.log(wallet.money())
